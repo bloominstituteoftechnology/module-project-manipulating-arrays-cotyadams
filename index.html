@@ -58,7 +58,13 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
-
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+          str = str.replace(str[i], '')
+          i--
+        }
+      }
+      return str
     }
 
     // 👉 CHALLENGE 3
