@@ -144,8 +144,18 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
-
+    function separateAges(ages) {
+      let arr1 = [], arr2 = []
+      for(let e in ages) {
+        if (ages[e] < 21) {
+          arr1.push(ages[e])
+        }
+        else if (ages[e] >= 21) {
+          arr2.push(ages[e])
+        }
+      }
+      let finalArray = [arr1, arr2]
+      return finalArray
     }
 
     // 👉 CHALLENGE 7
