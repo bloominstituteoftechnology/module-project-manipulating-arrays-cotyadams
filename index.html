@@ -72,8 +72,24 @@
     // 🧠 Examples of usage:
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
-    function sumNumsWhile() {
-
+    function sumNumsWhile(nums) {
+      let i = 0 
+      let sum = 0;
+      if (nums.length === 0) {
+          return 0
+        }
+        while (i < nums.length) {
+          if (nums[i] === 13) {
+            return "I'm too superstitious!"
+          }
+          else if (typeof nums[i] === "number") {
+            sum += nums[i]
+            console.log(sum)
+          }
+          i++
+        }
+      
+      return sum
     }
 
     // 👉 CHALLENGE 4
